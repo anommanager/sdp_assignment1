@@ -5,5 +5,14 @@ package org.example;
 
 public class App {
   public static void main(String[] args) {
+    CarDirector director = new CarDirector();
+
+    CarObjectBuilder carObjectBuilder = new CarObjectBuilder();
+    director.makeRacingCar(carObjectBuilder);
+    System.out.println(carObjectBuilder.getResult());
+
+    CarModelBuilder carModelBuilder = new CarModelBuilder();
+    director.makeRegularCar(carModelBuilder);
+    System.out.println(carModelBuilder.getResult());
   }
 }
