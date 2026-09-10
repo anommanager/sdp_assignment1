@@ -5,7 +5,7 @@ public final class Car {
   private final String model;
   private final double price;
 
-  Car(String brand, String model, String engine, String color, double price) {
+  Car(String brand, String model, double price) {
     this.brand = brand;
     this.model = model;
     this.price = price;

@@ -23,10 +23,10 @@ public class CarObjectBuilder implements CarBuilder {
     return this;
   }
 
-  public String getResult() {
+  public Car getResult() {
     if (brand == null || model == null || price == null) {
       throw new IllegalStateException("brand, model, and price are required");
     }
-    return "Real car. brand: " + brand + ", model: " + model + ", price: " + price + "$";
+    return new Car(brand, model, price);
   }
 }
