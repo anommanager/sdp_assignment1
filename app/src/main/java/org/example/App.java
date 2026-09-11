@@ -7,12 +7,30 @@ public class App {
   public static void main(String[] args) {
     CarDirector director = new CarDirector();
 
-    CarObjectBuilder carObjectBuilder = new CarObjectBuilder();
-    director.makeRacingCar(carObjectBuilder);
-    System.out.println(carObjectBuilder.getResult());
+    CarObjectBuilder racingObjectBuilder = new CarObjectBuilder();
+    director.makeRacingCar(racingObjectBuilder);
+    Car racingCar = racingObjectBuilder.getResult();
+    System.out.println(racingCar);
 
-    CarModelBuilder carModelBuilder = new CarModelBuilder();
-    director.makeRegularCar(carModelBuilder);
-    System.out.println(carModelBuilder.getResult());
+    CarListingBuilder racingListingBuilder = new CarListingBuilder();
+    director.makeRacingCar(racingListingBuilder);
+    String racingListing = racingListingBuilder.getResult();
+    System.out.println(racingListing);
+
+    CarObjectBuilder regularObjectBuilder = new CarObjectBuilder();
+    director.makeRegularCar(regularObjectBuilder);
+    Car regularCar = regularObjectBuilder.getResult();
+    System.out.println(regularCar);
+
+    CarListingBuilder regularListingBuilder = new CarListingBuilder();
+    director.makeRegularCar(regularListingBuilder);
+    String regularListing = regularListingBuilder.getResult();
+    System.out.println(regularListing);
+
+    try {
+      new CarObjectBuilder().setBrand("Toyota").getResult();
+    } catch (IllegalStateException e) {
+      System.out.println("validation error: " + e.getMessage());
+    }
   }
 }

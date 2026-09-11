@@ -1,18 +1,18 @@
 package org.example;
 
 public class CarDirector {
-  private static final String racingCarBrand = "Ferrari";
-  private static final String racingCarModel = "F1";
-  private static final Double racingCarPrice = 2590000.0;
-  private static final String regularCarBrand = "Mercedes";
-  private static final String regularCarModel = "Benz";
-  private static final Double regularCarPrice = 100000.0;
+  private static final String RACING_CAR_BRAND = "Ferrari";
+  private static final String RACING_CAR_MODEL = "F1";
+  private static final Double RACING_CAR_PRICE = 2590000.0;
+  private static final String REGULAR_CAR_BRAND = "Mercedes-Benz";
+  private static final String REGULAR_CAR_MODEL = "C Class";
+  private static final Double REGULAR_CAR_PRICE = 100000.0;
 
   public void makeRacingCar(CarBuilder builder) {
-    builder.setBrand(racingCarBrand).setModel(racingCarModel).setPrice(racingCarPrice);
+    builder.setBrand(RACING_CAR_BRAND).setModel(RACING_CAR_MODEL).setPrice(RACING_CAR_PRICE);
   }
 
   public void makeRegularCar(CarBuilder builder) {
-    builder.setBrand(regularCarBrand).setModel(regularCarModel).setPrice(regularCarPrice);
+    builder.setBrand(REGULAR_CAR_BRAND).setModel(REGULAR_CAR_MODEL).setPrice(REGULAR_CAR_PRICE);
   }
 }
