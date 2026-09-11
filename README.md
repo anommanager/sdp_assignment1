@@ -10,3 +10,9 @@ Project files:
 - CarModelBuilder.java - implements the builder interface to create a json string representation.
 - CarObjectBuilder.java - implements the builder interface to create a json string representation.
 - CarDirector.java: orchestrates the construction process.
+
+How to run:
+````
+```
+./gradlew run
+```
